@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Maze</title>
+  <meta name="description" content="Maze">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+  <meta name="author" content="Vanaj Moorthy">
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.js"></script>
+  <script src="sketch.js"></script>
+  <script src="cell.js"></script>
+  <script src="swipedetect.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142986613-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142986613-1');
+</script>
+
+</head>
+
+<body>
+  <div class="console">
+    <p id="hello">
+      <form>
+        Name: <input id="name" type="text" name="name" onchange="gameOverIfNeeded()"> ||
+        Number of boxes
+
+        <input id="colmInput" type="number" min="2" max="100" value="15" onchange="resetGame()"> || You finished in:
+        <span id="score">0</span> seconds || <input id="button" type="button" value="Reset" onclick="resetGame()">
+      </form>
+    </p>
+    <!-- </p> -->
+  </div>
+
+  <div id="wrapper">
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <ul id="liststuff" style="text-align: left">
+
+      </ul>
+    </div>
+  </div>
+</body>
+
+
+</html>
